@@ -1,54 +1,65 @@
 import random
 
 
-def jogar():
+def play():
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
-    arquivo = open("palavras.txt", "r")
-    palavras = []
+    file = open("words.txt", "r")
+    words = []
 
-    for linha in arquivo:
-        linha = linha.strip()
-        palavras.append(linha)
+    for line in file:
+        line = line.strip()
+        words.append(line)
 
-    arquivo.close()
+    file.close()
 
-    numero = random.randrange(0, len(palavras))
-    palavra_secreta = palavras[numero].upper()
+    number = random.randrange(0, len(words))
+    secret_word = words[number].lower()
 
-    letras_acertadas = ["_" for letra in palavra_secreta]
+    letters_right = ["_" for line in secret_word]
 
-    enforcou = False
-    acertou = False
-    erros = 0
+    hang = False
+    hit = False
+    miss = 0
+    life = 6
+    incorrect_letter = []
 
-    print(letras_acertadas)
+    print(letters_right)
 
-    while (not enforcou and not acertou):
+    while not hang and not hit:
 
-        chute = input("Qual letra? ")
-        chute = chute.strip().upper()
+        kick = input("Qual letra? ")
+        kick = kick.strip().lower()
 
-        if (chute in palavra_secreta):
-            index = 0
-            for letra in palavra_secreta:
-                if (chute == letra):
-                    letras_acertadas[index] = letra
-                index += 1
+        if kick in incorrect_letter:
+            print('Essa letra já foi utilizada, tente novamente'
+                  ' outra letra.')
         else:
-            erros += 1
+            if kick in secret_word:
+                index = 0
+                for letra in secret_word:
+                    if kick == letra:
+                        letters_right[index] = letra
+                    index += 1
+            else:
+                miss += 1
+                life -= 1
+                incorrect_letter.append(kick)
+                print(f'Letras erradas {incorrect_letter}.')
+                print(f'Voce ainda tem {life} vidas.')
 
-        enforcou = erros == 6
-        acertou = "_" not in letras_acertadas
-        print(letras_acertadas)
+            hang = miss == 6
+            hit = "_" not in letters_right
+            print(letters_right)
 
-    if (acertou):
+    if hit:
         print("Você ganhou!!")
     else:
         print("Você perdeu!!")
+        print(f'A palavra secreta era {secret_word}.')
     print("Fim do jogo")
 
 
-jogar()
+play()
