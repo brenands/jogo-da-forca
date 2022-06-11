@@ -3,15 +3,10 @@ import random_words
 import helpers
 
 outputs.game_start()
-
 secret_word = random_words.get_random_name()
-
 secret_word = helpers.remove_special_characters(secret_word)
-
 letters_right = helpers.change_word_to_underline(secret_word)
-
 outputs.letters_right(letters_right)
-
 
 hang = False
 hit = False
