@@ -6,7 +6,7 @@ def play():
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
-    file = open("words.txt", "r")
+    file = open("files/words.txt", "r")
     words = []
 
     for line in file:
