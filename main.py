@@ -37,7 +37,7 @@ while not hang and not hit:
         outputs.letters_right(letters_right)
 
 if hit:
-    outputs.yoy_won()
+    outputs.you_won()
 else:
     outputs.you_lost()
     outputs.reveal_secret_word(word)
