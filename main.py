@@ -27,7 +27,7 @@ while not hang and not hit:
         else:
             life -= 1
             incorrect_letter.append(kick)
-            outputs.doesnt_exists()
+            outputs.doesnt_exists(kick)
             outputs.draw_hangman(life)
             outputs.letters_tried(incorrect_letter)
             outputs.users_life(life)

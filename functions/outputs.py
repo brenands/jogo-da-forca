@@ -8,7 +8,7 @@ def you_lost():
     print("Você perdeu, não foi dessa vez!!")
 
 
-def yoy_won():
+def you_won():
     print('Parabéns, você ganhou!!')
 
 
@@ -16,8 +16,8 @@ def reveal_secret_word(word):
     print(f'A palavra secreta era {word}.')
 
 
-def doesnt_exists():
-    print('Esta letra não existe, tente novamente.')
+def doesnt_exists(letter):
+    print(f'A letra "{letter}" não existe, tente novamente.')
 
 
 def users_life(life):
