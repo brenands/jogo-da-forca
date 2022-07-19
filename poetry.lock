@@ -112,6 +112,17 @@ pytest = ">=5.0,<6.0.0 || >6.0.0"
 pytest-metadata = "*"
 
 [[package]]
+name = "pytest-md"
+version = "0.2.0"
+description = "Plugin for generating Markdown reports for pytest results"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pytest = ">=4.2.1"
+
+[[package]]
 name = "pytest-metadata"
 version = "2.0.2"
 description = "pytest plugin for test session metadata"
@@ -141,7 +152,7 @@ python-versions = ">=3.5"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "4dff01707594b4053e03c4d7a55eddc323a3f52a0d204a24fd314ddc7d7a8d48"
+content-hash = "46c4b9faf1fb33c135efac0804dddf5efd825530939778c307befd63319a1528"
 
 [metadata.files]
 atomicwrites = []
@@ -178,6 +189,7 @@ pytest = [
     {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
 ]
 pytest-html = []
+pytest-md = []
 pytest-metadata = []
 tomli = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
