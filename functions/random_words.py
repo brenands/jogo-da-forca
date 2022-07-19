@@ -1,8 +1,10 @@
 import random
+import os
 
 
 def get_random_name() -> str:
-    file = open('C:\\Users\\Brenand\\PycharmProjects\\jogodavelha\\Jogo-da-velha\\files\\words.txt', 'r')
+    fn = os.path.join(os.path.dirname(__file__), '../files/words.txt')
+    file = open(fn, 'r')
     words = []
 
     for line in file:

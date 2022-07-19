@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "jogo_da_forca_brenand"
+version = "0.1.0"
+description = ""
+authors = ["brunobarros <1232097@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Unidecode = "^1.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
