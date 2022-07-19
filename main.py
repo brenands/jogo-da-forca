@@ -4,8 +4,7 @@ from functions import random_words
 
 outputs.game_start()
 word = random_words.get_random_name()
-word = helpers.remove_special_characters(word)
-letters_right = helpers.change_word_to_underline(word)
+letters_right = helpers.change_word_to_underline(helpers.remove_special_characters(word))
 outputs.letters_right(letters_right)
 
 hang = False

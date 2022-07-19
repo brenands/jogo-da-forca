@@ -15,8 +15,7 @@ def remove_special_characters(word) -> str:
 
 
 def check_if_exists_on_word(word, letter) -> bool:
-    if letter in word:
-        return True
+    return remove_special_characters(letter) in remove_special_characters(word)
 
 
 def show_correct_letters(word, tries) -> str:
@@ -24,7 +23,7 @@ def show_correct_letters(word, tries) -> str:
 
     for index, letter in enumerate(word):
         for item in tries:
-            if item == letter:
+            if remove_special_characters(item) == remove_special_characters(letter):
                 letters_right[index] = letter
 
     letters_right = ' '.join(letters_right)

@@ -1,5 +1,2 @@
-maça
-banana
-uva
-tomate
-laranja
+maçã
+você
