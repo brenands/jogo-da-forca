@@ -14,4 +14,3 @@ def get_random_name() -> str:
     secret_word = words[number].lower()
 
     return secret_word
-

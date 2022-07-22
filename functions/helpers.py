@@ -17,6 +17,8 @@ def remove_special_characters(word) -> str:
 def check_if_exists_on_word(word, letter) -> bool:
     if letter in word:
         return True
+    else:
+        return False
 
 
 def show_correct_letters(word, tries) -> str:
